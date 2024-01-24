@@ -21,6 +21,18 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifD-Df-7BU">
+                                <rect key="frame" x="108.33333333333333" y="89" width="176.33333333333337" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rWy-1s-i5q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location.magnifyingglass" catalog="system" title="종류별 영화관 찾기"/>
+                                <connections>
+                                    <action selector="findCineBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80D-Rx-iVh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -29,6 +41,8 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dPJ-Zl-xLd" secondAttribute="trailing" id="7JY-uK-dfY"/>
                             <constraint firstItem="dPJ-Zl-xLd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XBB-eG-63x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dPJ-Zl-xLd" secondAttribute="bottom" id="aMb-Xe-erM"/>
+                            <constraint firstItem="ifD-Df-7BU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dAX-qd-2Rr"/>
+                            <constraint firstItem="ifD-Df-7BU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="zF3-kq-EWW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -41,6 +55,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location.magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

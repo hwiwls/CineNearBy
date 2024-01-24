@@ -11,6 +11,7 @@ import MapKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    var theaterList = TheaterList()
     
     // 2. 위치 메니저. 위치 관련 데이터를 관리하고 사용자의 위치에 대한 업데이트를 받음.
     let locationManager = CLLocationManager()
@@ -23,6 +24,63 @@ class ViewController: UIViewController {
         locationManager.delegate = self
         
         checkDeviceLocationAuthorization()
+        configAnnotation()
+    }
+    
+    @IBAction func findCineBtn(_ sender: UIButton) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let megaBoxAction = UIAlertAction(title: "메가박스", style: .default) { _ in
+            self.addAnnotations(for: "메가박스")
+        }
+        
+        let lotteCinemaAction = UIAlertAction(title: "롯데시네마", style: .default) { _ in
+            self.addAnnotations(for: "롯데시네마")
+        }
+            
+        let cgvAction = UIAlertAction(title: "CGV", style: .default) { _ in
+            self.addAnnotations(for: "CGV")
+        }
+        
+        let allCineAction = UIAlertAction(title: "전체보기", style: .default) { _ in
+            self.configAnnotation()
+        }
+            
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            
+        alert.addAction(megaBoxAction)
+        alert.addAction(lotteCinemaAction)
+        alert.addAction(cgvAction)
+        alert.addAction(allCineAction)
+        alert.addAction(cancelAction)
+            
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
+extension ViewController {
+    func configAnnotation() {
+        for theater in theaterList.mapAnnotations {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: theater.latitude, longitude: theater.longitude)
+            annotation.title = theater.location
+            
+            mapView.addAnnotation(annotation)
+        }
+    }
+    
+    func addAnnotations(for type: String) {
+        mapView.removeAnnotations(mapView.annotations)
+        
+        for theater in theaterList.mapAnnotations {
+            if theater.type == type {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = CLLocationCoordinate2D(latitude: theater.latitude, longitude: theater.longitude)
+                annotation.title = theater.location
+                
+                mapView.addAnnotation(annotation)
+            }
+        }
     }
 }
 
