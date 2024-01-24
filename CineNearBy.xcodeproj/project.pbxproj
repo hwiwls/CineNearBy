@@ -13,6 +13,7 @@
 		2E1386BD2B6121B500D1CEC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1386BB2B6121B500D1CEC2 /* Main.storyboard */; };
 		2E1386BF2B6121B700D1CEC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1386BE2B6121B700D1CEC2 /* Assets.xcassets */; };
 		2E1386C22B6121B700D1CEC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1386C02B6121B700D1CEC2 /* LaunchScreen.storyboard */; };
+		2E1386CB2B612EC600D1CEC2 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1386CA2B612EC600D1CEC2 /* Theater.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2E1386BE2B6121B700D1CEC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E1386C12B6121B700D1CEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E1386C32B6121B700D1CEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E1386CA2B612EC600D1CEC2 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,22 @@
 			children = (
 				2E1386B52B6121B500D1CEC2 /* AppDelegate.swift */,
 				2E1386B72B6121B500D1CEC2 /* SceneDelegate.swift */,
-				2E1386B92B6121B500D1CEC2 /* ViewController.swift */,
 				2E1386BB2B6121B500D1CEC2 /* Main.storyboard */,
+				2E1386B92B6121B500D1CEC2 /* ViewController.swift */,
+				2E1386C92B612EB900D1CEC2 /* Model */,
 				2E1386BE2B6121B700D1CEC2 /* Assets.xcassets */,
 				2E1386C02B6121B700D1CEC2 /* LaunchScreen.storyboard */,
 				2E1386C32B6121B700D1CEC2 /* Info.plist */,
 			);
 			path = CineNearBy;
+			sourceTree = "<group>";
+		};
+		2E1386C92B612EB900D1CEC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E1386CA2B612EC600D1CEC2 /* Theater.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E1386BA2B6121B500D1CEC2 /* ViewController.swift in Sources */,
+				2E1386CB2B612EC600D1CEC2 /* Theater.swift in Sources */,
 				2E1386B62B6121B500D1CEC2 /* AppDelegate.swift in Sources */,
 				2E1386B82B6121B500D1CEC2 /* SceneDelegate.swift in Sources */,
 			);
