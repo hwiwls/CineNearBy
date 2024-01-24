@@ -89,7 +89,10 @@ extension ViewController {
             }
         }
         
-        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        let cancel = UIAlertAction(title: "취소", style: .cancel) { _ in
+            let center = CLLocationCoordinate2D(latitude: 37.65502693170023, longitude: 127.04987686698631)
+            self.setRegionAndAnnotation(center: center)
+        }
         
         alert.addAction(goSetting)
         alert.addAction(cancel)
