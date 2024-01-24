@@ -14,6 +14,7 @@
 		2E1386BF2B6121B700D1CEC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E1386BE2B6121B700D1CEC2 /* Assets.xcassets */; };
 		2E1386C22B6121B700D1CEC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E1386C02B6121B700D1CEC2 /* LaunchScreen.storyboard */; };
 		2E1386CB2B612EC600D1CEC2 /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1386CA2B612EC600D1CEC2 /* Theater.swift */; };
+		2E1386CE2B615AF800D1CEC2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1386CD2B615AF800D1CEC2 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2E1386C12B6121B700D1CEC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E1386C32B6121B700D1CEC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E1386CA2B612EC600D1CEC2 /* Theater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
+		2E1386CD2B615AF800D1CEC2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2E1386BB2B6121B500D1CEC2 /* Main.storyboard */,
 				2E1386B92B6121B500D1CEC2 /* ViewController.swift */,
 				2E1386C92B612EB900D1CEC2 /* Model */,
+				2E1386CC2B615A8900D1CEC2 /* Extension */,
 				2E1386BE2B6121B700D1CEC2 /* Assets.xcassets */,
 				2E1386C02B6121B700D1CEC2 /* LaunchScreen.storyboard */,
 				2E1386C32B6121B700D1CEC2 /* Info.plist */,
@@ -76,6 +79,14 @@
 				2E1386CA2B612EC600D1CEC2 /* Theater.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2E1386CC2B615A8900D1CEC2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E1386CD2B615AF800D1CEC2 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				2E1386BA2B6121B500D1CEC2 /* ViewController.swift in Sources */,
 				2E1386CB2B612EC600D1CEC2 /* Theater.swift in Sources */,
 				2E1386B62B6121B500D1CEC2 /* AppDelegate.swift in Sources */,
+				2E1386CE2B615AF800D1CEC2 /* UIViewController+Extension.swift in Sources */,
 				2E1386B82B6121B500D1CEC2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

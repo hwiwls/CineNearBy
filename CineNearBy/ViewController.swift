@@ -28,33 +28,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func findCineBtn(_ sender: UIButton) {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        let megaBoxAction = UIAlertAction(title: "메가박스", style: .default) { _ in
-            self.addAnnotations(for: "메가박스")
+        showActionSheet() { cineType in
+            if cineType == "전체보기" {
+                self.configAnnotation()
+            } else {
+                self.addAnnotations(for: cineType)
+            }
         }
-        
-        let lotteCinemaAction = UIAlertAction(title: "롯데시네마", style: .default) { _ in
-            self.addAnnotations(for: "롯데시네마")
-        }
-            
-        let cgvAction = UIAlertAction(title: "CGV", style: .default) { _ in
-            self.addAnnotations(for: "CGV")
-        }
-        
-        let allCineAction = UIAlertAction(title: "전체보기", style: .default) { _ in
-            self.configAnnotation()
-        }
-            
-        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
-            
-        alert.addAction(megaBoxAction)
-        alert.addAction(lotteCinemaAction)
-        alert.addAction(cgvAction)
-        alert.addAction(allCineAction)
-        alert.addAction(cancelAction)
-            
-        self.present(alert, animated: true, completion: nil)
     }
 }
 
